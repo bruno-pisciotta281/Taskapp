@@ -27,8 +27,51 @@ export default function Task({ navigation }) {
     }, []);
     
     return(
-    <View>
-        <Text>Page Tasks</Text>
-    </View>
-    )
-}
+        <View style={styles.container}>
+          <FlatList
+            showsVerticalScrollIndicator={false}
+            data={task}
+            renderItem={( { item } )=>{
+               return(
+              <View style={styles.Tasks}>
+                <TouchableOpacity
+                  style={styles.deleteTask}
+                  onPress={() => {
+                    deleteTask(item.id)
+                  }}
+                >
+                <FontAwesome
+                  name="star"
+                  size={23}
+                  color="#F92e6A"
+                >
+                </FontAwesome>
+                </TouchableOpacity>
+                <Text
+                  style={styles.DescriptionTask}
+                  onPress={()=>
+                    navigation.navigate("Details",{
+                      id: item.id,
+                      description: item.description,
+                    })
+                  }
+                >
+                {item.description}  
+                </Text>  
+     
+              </View>
+              )
+            }}
+          />
+          <TouchableOpacity style
+            style={styles.buttonNewTask}
+            onPress={() => navigation.navigate("New Task")}
+          >
+            <Text style={styles.iconButton}>+</Text>
+          </TouchableOpacity>
+        </View>
+      )
+    }
+
+      
+    
