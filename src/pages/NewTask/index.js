@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
-import database from '../../config/firebase.js'
+import firebase from '../../config/firebase.js'
 import styles from "./style";
 
-export default function NewTask({ navigation }, props) {
+export default function NewTask({ navigation, route }, props) {
  
     const [description, setDescription] = useState(null);
-   
+    const database = firebase.firestore()
     function addTask(){
-      database.collection('Tasks').add({
+      database.collection(route.params.idUser).add({
         description: description,
         status: false
       })

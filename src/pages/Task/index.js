@@ -5,19 +5,28 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
-import database from "../../config/firebase.js";
-import { FontAwesome } from "@expo/vector-icons";
+import firebase from "../../config/firebase.js";
+import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 import styles from "./style";
 
-export default function Task({ navigation }) {
+export default function Task({ navigation, route }) {
     const [task, setTask] = useState([]);
-   
+    const database = firebase.firestore()
+
+    function logout(){
+      firebase.auth().signOut().then(()=>{
+        navigation.navigate("Login")
+      }).catch((error)=>{
+        
+      });
+    }
+    
     function deleteTask(id) {
-      database.collection("Tasks").doc(id).delete();
+      database.collection(route.params.idUser).doc(id).delete();
     }
    
     useEffect(() => {
-      database.collection("Tasks").onSnapshot((query) => {
+      database.collection(route.params.idUser).onSnapshot((query) => {
         const list = [];
         query.forEach((doc) => {
           list.push({ ...doc.data(), id: doc.id });
@@ -53,6 +62,7 @@ export default function Task({ navigation }) {
                     navigation.navigate("Details",{
                       id: item.id,
                       description: item.description,
+                      idUser: route.params.idUser
                     })
                   }
                 >
@@ -63,11 +73,23 @@ export default function Task({ navigation }) {
               )
             }}
           />
-          <TouchableOpacity style
+          <TouchableOpacity
             style={styles.buttonNewTask}
-            onPress={() => navigation.navigate("New Task")}
+            onPress={() => navigation.navigate("New Task", { idUser: route.params.idUser })}
           >
             <Text style={styles.iconButton}>+</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.buttonLogout}
+            onPress={() => {logout()}}
+            >
+              <Text style={styles.iconButtonLogout}>
+                <MaterialCommunityIcons 
+                name="location-exit" 
+                size={23} 
+                color="#F92e6A" 
+                />
+              </Text>
           </TouchableOpacity>
         </View>
       )
