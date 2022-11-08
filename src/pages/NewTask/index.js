@@ -17,20 +17,21 @@ export default function NewTask({ navigation, route }, props) {
 
 return(
     <View style={styles.container}>
-      <Text style={styles.label}>Description</Text>
+      <Text style={styles.label}>Descrição</Text>
       <TextInput
       style={styles.input}
       placeholder="Ex: Jogar o lixo fora"
       onChangeText={setDescription}
       value={description}
       />
+      <Text style={styles.textInfo}>Clique em "Salvar" para cadastrar sua Tarefa</Text>
       <TouchableOpacity 
         style={styles.buttonNewTask}
         onPress={()=>{
           addTask()
         }}
       >
-        <Text style={styles.iconButton}>Save</Text>
+        <Text style={styles.iconButton}>Salvar</Text>
       </TouchableOpacity>
     </View>
   )

@@ -72,6 +72,7 @@ warningAlert: {
 },
 
 registration:{
+    padding:10,
     marginTop:10,
     color:'#004a69'
 },

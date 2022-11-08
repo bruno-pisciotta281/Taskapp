@@ -26,13 +26,15 @@ return(
       onChangeText={setDescriptionEdit}
       value={descriptionEdit}
       />
+      
+      <Text style={styles.textInfo}>Clique em "Alterar" para alterar sua Tarefa</Text>
       <TouchableOpacity 
         style={styles.buttonNewTask}
         onPress={()=>{
           editTask(descriptionEdit, idTask)
         }}
       >
-        <Text style={styles.iconButton}>Save</Text>
+        <Text style={styles.iconButton}>Alterar</Text>
       </TouchableOpacity>
     </View>
   )

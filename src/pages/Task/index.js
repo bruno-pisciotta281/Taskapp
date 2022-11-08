@@ -37,6 +37,7 @@ export default function Task({ navigation, route }) {
     
     return(
         <View style={styles.container}>
+          
           <FlatList
             showsVerticalScrollIndicator={false}
             data={task}
@@ -87,7 +88,7 @@ export default function Task({ navigation, route }) {
                 <MaterialCommunityIcons 
                 name="location-exit" 
                 size={23} 
-                color="#2e8daf" 
+                color="#ffffff" 
                 />
               </Text>
           </TouchableOpacity>

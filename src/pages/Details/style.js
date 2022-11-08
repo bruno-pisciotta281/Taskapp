@@ -37,7 +37,13 @@ const styles = StyleSheet.create({
   color:"#ffffff",
   fontSize:16,
   fontWeight:"bold",
- }
+ },
+
+ textInfo:{
+  textAlign:"center",
+  padding:15,
+  fontWeight:"bold",
+ },
  
 });
  

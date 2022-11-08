@@ -88,11 +88,11 @@ useEffect(() => {
       </TouchableOpacity>
       }
       <Text style={styles.registration}>
-      Não possui Login?||
+      Não possui Login?
+      </Text>
       <Text style={styles.linkSubscribe}
       onPress={() => navigation.navigate("Novo Usuário")}>
       Crie um cadastro!
-      </Text>
       </Text>
       <View style={{height:100}}/>
     </KeyboardAvoidingView>

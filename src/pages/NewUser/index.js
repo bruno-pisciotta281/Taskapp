@@ -16,7 +16,7 @@ export default function NewUser({ navigation }){
     .then((userCredential) => {
 
       let user = userCredential.user;
-      navigation.navigate("Tarefa" , { idUser: user.uid });
+      navigation.navigate("Tarefas" , { idUser: user.uid });
       
   
     })
@@ -33,10 +33,10 @@ export default function NewUser({ navigation }){
       behavior={Platform.OS === "ios"? "padding" : "height"}
       style={styles.container}
       >
-        <Text style={styles.title}>Crie uma conta na Task</Text>
+        <Text style={styles.title}>Crie sua conta!</Text>
       <TextInput
         style={styles.input} 
-        placeholder="Entre com seu E-mail"
+        placeholder="Insira seu E-mail"
         type="text"
         value={email}
         onChangeText={(text) => setEmail(text)}
@@ -44,7 +44,7 @@ export default function NewUser({ navigation }){
       <TextInput
       style={styles.input} 
       secureTextEntry={true}
-      placeholder="Entre com sua Senha"
+      placeholder="Insira uma Senha"
       type="text"
       value={password}
       onChangeText={(text) => setPassword(text)}
@@ -80,14 +80,15 @@ export default function NewUser({ navigation }){
       </TouchableOpacity>
       }
       <Text style={styles.Login}>
-      Já possui Login?||
+      Já possui Login?
+      </Text>
       <Text
       style={styles.linkLogin}
       onPress={() => navigation.navigate("Login")}
       >
       Faça Login!
       </Text>
-      </Text>
+     
       <View style={{height:100}}/>
       </KeyboardAvoidingView>
     );

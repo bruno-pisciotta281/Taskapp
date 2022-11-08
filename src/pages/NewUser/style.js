@@ -10,7 +10,7 @@ container: {
 },
 
 title: {
-    fontSize: 28,
+    fontSize: 40,
     color: '#2e8daf',
     marginBottom:10,
     fontWeight: 'bold',
@@ -39,12 +39,12 @@ buttonRegister: {
 },
 
 textButtonRegister: {
+    padding:10,
     color: '#ffffff',
     fontWeight: 'bold',
 },
 
 contentAlert: {
-    marginTop:10,
     flexDirection: 'row',
     justifyContent:'center',
     alignItems:'center',
@@ -57,11 +57,12 @@ warningAlert: {
 },
 
 Login:{
-    marginTop:10,
+    marginTop:20,
     color:'#4d5155'
 },
 
 linkLogin:{
+    marginTop:10,
     color:'#2e8daf',
     fontSize:16,
 

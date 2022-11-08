@@ -51,15 +51,26 @@ const styles = StyleSheet.create({
   position:"absolute",
   bottom: 30,
   right:20,
+  backgroundColor:"#2e8daf",
+  borderRadius:50,
   justifyContent:"center",
   alignItems: "center"
+ 
  },
 
  iconButtonLogout:{
   color:"#ffffff",
   fontSize:25,
   fontWeight:"bold",
- }
+ },
+
+ textInfo:{
+  
+  textAlign:"center",
+  padding:15,
+  fontWeight:"bold",
+
+ },
 
 });
  
