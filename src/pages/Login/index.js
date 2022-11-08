@@ -14,7 +14,7 @@ const loginFirebase = () => {
 firebase.auth() .signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
     let user = userCredential.user;
-    navigation.navigate("Task" , { idUser: user.uid });
+    navigation.navigate("Tarefas" , { idUser: user.uid });
   })
   .catch((error) => {
     setErrorLogin(true)
@@ -26,7 +26,7 @@ firebase.auth() .signInWithEmailAndPassword(email, password)
 useEffect(() => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      navigation.navigate("Task", { idUser: user.uid });
+      navigation.navigate("Tarefas", { idUser: user.uid });
     }
   });
 }, []);
@@ -38,7 +38,10 @@ useEffect(() => {
     style={styles.container}
     >
 
-      <Text style={styles.title}>Task</Text>
+      <Text style={styles.titleLogin1}>Sua
+      <Text style={styles.titleLogin2}>Tarefa
+      </Text>
+      </Text>
       <TextInput
         style={styles.input} 
         placeholder="Entre com seu E-mail"
@@ -86,10 +89,8 @@ useEffect(() => {
       }
       <Text style={styles.registration}>
       Não possui Login?||
-      <Text
-      style={styles.linkSubscribe}
-      onPress={() => navigation.navigate("NewUser")}
-      >
+      <Text style={styles.linkSubscribe}
+      onPress={() => navigation.navigate("Novo Usuário")}>
       Crie um cadastro!
       </Text>
       </Text>

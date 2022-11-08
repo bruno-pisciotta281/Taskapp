@@ -9,9 +9,24 @@ flex: 1,
     paddingTop: Platform.OS === 'ios'? 0 : 50,
 },
 
+titleLogin1:{
+color:"#004a69",
+fontSize: 48,
+marginBottom:10,
+fontWeight: 'bold',
+
+},
+
+titleLogin2:{
+color:"#2e8daf",
+fontSize: 48,
+marginBottom:10,
+fontWeight: 'bold',
+
+},
+
 title: {
     fontSize: 48,
-    color: '#F92e6a',
     marginBottom:10,
     fontWeight: 'bold',
 },
@@ -22,7 +37,7 @@ input: {
     padding:10,
     height:50,
     borderBottomWidth: 1,
-    borderBottomColor:"#F92E6A",
+    borderBottomColor:"#2e8daf",
     marginLeft:"auto",
     marginRight:"auto",
     color:"#4d5156",
@@ -33,7 +48,7 @@ buttonLogin: {
     height:50,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:'#F92E6A',
+    backgroundColor:'#2e8daf',
     borderRadius:50,
     marginTop:30,
 },
@@ -58,11 +73,11 @@ warningAlert: {
 
 registration:{
     marginTop:10,
-    color:'#4d5155'
+    color:'#004a69'
 },
 
 linkSubscribe:{
-    color:'#1877f2',
+    color:'#2e8daf',
     fontSize:16,
 
 }

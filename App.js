@@ -24,33 +24,33 @@ export default function App() {
           }}
         />
          <Stack.Screen
-          name="NewUser"
+          name="Novo Usuário"
           component={NewUser}
           options={{
             headerShown: false,
           }}
         />
         <Stack.Screen
-          name="Task"
+          name="Tarefas"
           component={Task}
           options={{
             headerLeft: null,
-            headerTintColor: "#F92E6A",
+            headerTintColor: "#2e8daf",
           }}
         />
         <Stack.Screen
-          name="New Task"
+          name="Nova Tarefa"
           component={NewTask}
           options={{
-            headerTintColor: "#F92E6A",
+            headerTintColor: "#2e8daf",
           }}
           
         />
         <Stack.Screen
-          name="Details"
+          name="Detalhes da Tarefa"
           component={Details}
           options={{
-            headerTintColor: "#F92E6A",
+            headerTintColor: "#2e8daf",
           }}
         />
       </Stack.Navigator>

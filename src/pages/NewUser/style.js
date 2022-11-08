@@ -11,7 +11,7 @@ container: {
 
 title: {
     fontSize: 28,
-    color: '#F92e6a',
+    color: '#2e8daf',
     marginBottom:10,
     fontWeight: 'bold',
 },
@@ -22,7 +22,7 @@ input: {
     padding:10,
     height:50,
     borderBottomWidth: 1,
-    borderBottomColor:"#F92E6A",
+    borderBottomColor:"#2e8daf",
     marginLeft:"auto",
     marginRight:"auto",
     color:"#4d5156",
@@ -33,7 +33,7 @@ buttonRegister: {
     height:50,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:'#F92E6A',
+    backgroundColor:'#2e8daf',
     borderRadius:50,
     marginTop:30,
 },
@@ -62,7 +62,7 @@ Login:{
 },
 
 linkLogin:{
-    color:'#1877f2',
+    color:'#2e8daf',
     fontSize:16,
 
 }

@@ -12,7 +12,7 @@ export default function NewTask({ navigation, route }, props) {
         description: description,
         status: false
       })
-      navigation.navigate("Task")
+      navigation.navigate("Tarefas")
     }
 
 return(
@@ -20,7 +20,7 @@ return(
       <Text style={styles.label}>Description</Text>
       <TextInput
       style={styles.input}
-      placeholder="Ex: estudar javascript"
+      placeholder="Ex: Jogar o lixo fora"
       onChangeText={setDescription}
       value={description}
       />

@@ -14,15 +14,15 @@ export default function Details({navigation, route}){
       database.collection(route.params.idUser).doc(id).update({
         description: description,
       })
-      navigation.navigate("Task")
+      navigation.navigate("Tarefas")
     }
 
 return(
     <View style={styles.container}>
-      <Text style={styles.label}>Description</Text>
+      <Text style={styles.label}>Descrição</Text>
       <TextInput
       style={styles.input}
-      placeholder="Ex: estudar javascript"
+      placeholder="Ex: Jogar o lixo fora"
       onChangeText={setDescriptionEdit}
       value={descriptionEdit}
       />

@@ -16,7 +16,7 @@ export default function NewUser({ navigation }){
     .then((userCredential) => {
 
       let user = userCredential.user;
-      navigation.navigate("Task" , { idUser: user.uid });
+      navigation.navigate("Tarefa" , { idUser: user.uid });
       
   
     })
@@ -83,7 +83,7 @@ export default function NewUser({ navigation }){
       Já possui Login?||
       <Text
       style={styles.linkLogin}
-      onPress={() => navigation.navigate("NewUser")}
+      onPress={() => navigation.navigate("Login")}
       >
       Faça Login!
       </Text>

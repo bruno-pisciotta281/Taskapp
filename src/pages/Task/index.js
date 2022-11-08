@@ -50,16 +50,16 @@ export default function Task({ navigation, route }) {
                   }}
                 >
                 <FontAwesome
-                  name="star"
+                  name="trash"
                   size={23}
-                  color="#F92e6A"
+                  color="#2e8daf"
                 >
                 </FontAwesome>
                 </TouchableOpacity>
                 <Text
                   style={styles.DescriptionTask}
                   onPress={()=>
-                    navigation.navigate("Details",{
+                    navigation.navigate("Detalhes da Tarefa",{
                       id: item.id,
                       description: item.description,
                       idUser: route.params.idUser
@@ -75,7 +75,7 @@ export default function Task({ navigation, route }) {
           />
           <TouchableOpacity
             style={styles.buttonNewTask}
-            onPress={() => navigation.navigate("New Task", { idUser: route.params.idUser })}
+            onPress={() => navigation.navigate("Nova Tarefa", { idUser: route.params.idUser })}
           >
             <Text style={styles.iconButton}>+</Text>
           </TouchableOpacity>
@@ -87,7 +87,7 @@ export default function Task({ navigation, route }) {
                 <MaterialCommunityIcons 
                 name="location-exit" 
                 size={23} 
-                color="#F92e6A" 
+                color="#2e8daf" 
                 />
               </Text>
           </TouchableOpacity>
