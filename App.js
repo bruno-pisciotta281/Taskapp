@@ -34,8 +34,11 @@ export default function App() {
           name="Tarefas"
           component={Task}
           options={{
+            headerStyle:{
+              backgroundColor: "#2e8daf"
+            },
             headerLeft: null,
-            headerTintColor: "#2e8daf",
+            headerTintColor: "#ffffff",
           }}
         />
         <Stack.Screen

@@ -7,13 +7,13 @@ export default function NewTask({ navigation, route }, props) {
  
     const [description, setDescription] = useState(null);
     const database = firebase.firestore()
-    function addTask(){
+    function  addTask (){
       database.collection(route.params.idUser).add({
         description: description,
         status: false
       })
-      navigation.navigate("Tarefas")
-    }
+      navigation.navigate("Tarefas",{idUser:route.params.idUser}) 
+  }
 
 return(
     <View style={styles.container}>
@@ -24,6 +24,8 @@ return(
       onChangeText={setDescription}
       value={description}
       />
+
+      
       <Text style={styles.textInfo}>Clique em "Salvar" para cadastrar sua Tarefa</Text>
       <TouchableOpacity 
         style={styles.buttonNewTask}

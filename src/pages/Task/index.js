@@ -9,7 +9,7 @@ import firebase from "../../config/firebase.js";
 import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 import styles from "./style";
 
-export default function Task({ navigation, route }) {
+export default function Task({ route, navigation }) {
     const [task, setTask] = useState([]);
     const database = firebase.firestore()
 
@@ -20,6 +20,8 @@ export default function Task({ navigation, route }) {
         
       });
     }
+
+    
     
     function deleteTask(id) {
       database.collection(route.params.idUser).doc(id).delete();
